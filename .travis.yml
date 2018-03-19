@@ -1,0 +1,27 @@
+language: node_js
+node_js: stable
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+script:
+  - hexo clean
+  - hexo g
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "propersoft-ci"
+  - git config user.email "hexin@propersoft.cn"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+# E: Build LifeCycle
+
+branches:
+  only:
+    - blog-resource
+env:
+ global:
+   - GH_REF: github.com/oopstorm/oopstorm.github.io
