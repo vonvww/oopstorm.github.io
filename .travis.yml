@@ -15,7 +15,7 @@ after_script:
   - git config user.email "hexin@propersoft.cn"
   - git add .
   - git commit -m "Update docs"
-  - git push --force --quiet "https://$wwvonv@$GH_REF" dev:master
+  - git push --force --quiet "https://$vonvww@$GH_REF" dev:master
 
 branches:
   only:
