@@ -15,11 +15,11 @@ after_script:
   - git config user.email "hexin@propersoft.cn"
   - git add .
   - git commit -m "Update docs"
-  - git push --force --quiet "https://${wwvonv}@${GH_REF}" master:master
+  - git push --force --quiet "https://${wwvonv}@${GH_REF}" dev:master
 
 branches:
   only:
     - dev
 env:
  global:
-   - GH_REF: github.com/vonvww/oopstorm.github.io/tree/dev
+   - GH_REF: github.com/vonvww/oopstorm.github.io
