@@ -11,8 +11,8 @@ script:
 after_script:
   - cd ./public
   - git init
-  - git config user.name "propersoft-ci"
-  - git config user.email "hexin@propersoft.cn"
+  - git config user.name "vonvww"
+  - git config user.email "ww.gggxwy@163.com"
   - git add .
   - git commit -m "Update docs"
   - git push --force --quiet "https://$vonvww@$GH_REF" dev:master
@@ -22,4 +22,4 @@ branches:
     - dev
 env:
  global:
-   - GH_REF: github.com/vonvww/oopstorm.github.io/tree/dev
+   - GH_REF: github.com/vonvww/oopstorm.github.io.git
