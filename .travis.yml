@@ -1,7 +1,6 @@
 language: node_js
 node_js: stable
 
-# S: Build Lifecycle
 install:
   - npm install
 
@@ -16,8 +15,7 @@ after_script:
   - git config user.email "hexin@propersoft.cn"
   - git add .
   - git commit -m "Update docs"
-  - git push --force --quiet "https://$GH_TOKEN@$GH_REF" master:master
-# E: Build LifeCycle
+  - git push --force "https://$GH_TOKEN@$GH_REF"
 
 branches:
   only:
